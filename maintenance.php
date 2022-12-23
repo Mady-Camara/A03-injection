@@ -1,15 +1,14 @@
 <?php
 include 'conn.php';
 include 'session.php';
+$userID = $_SESSION['userID'];
 if(isset($_POST['add'])){
-
 	$fname = $_POST['fname'];
 	$lname = $_POST['lname'];
-	$uid =$_GET['id'];
-	$insert = "insert into info_tbl (firstName,lastName,custid) values ('$fname','$lname','$uid')";
+	$insert = "insert into info_tbl (firstName,lastName,custid) values ('$fname','$lname','$userID')";
 	if($conn->query($insert)== TRUE){
-			echo "Sucessfully add data";
-			header('location:maintenance.php');
+			echo "Insertion reussie";
+			header('location:maintenance.php?id='.$userID);
 	}else{
 		echo "Ooppss cannot add data" . $conn->connect_error;
 		header('location:maintenance.php?id='.$userID);

@@ -37,7 +37,12 @@ CREATE TABLE IF NOT EXISTS `info_tbl` (
 --
 
 INSERT INTO `info_tbl` (`infoID`, `firstName`, `lastName`) VALUES
-(11, 'kumar', 'Deepak');
+(1, 'Mady', 'CAMARA'),
+(2, 'Mohamed Bah', 'SIDI'),
+(3, 'Sokhna Maimouna', 'MBACKE MBOUP'),
+(5, 'Zeinebou', 'SY'),
+(4, 'Yaye Aida', 'DIONE'),
+(11, 'mady', 'camara');
 
 -- --------------------------------------------------------
 
@@ -57,6 +62,10 @@ CREATE TABLE IF NOT EXISTS `user_tbl` (
 
 INSERT INTO `user_tbl` (`userID`, `username`, `password`) VALUES
 (3, 'admin', 'admin');
+INSERT INTO `user_tbl` (`userID`, `username`, `password`) VALUES
+(2, 'sidi', 'passer');
+INSERT INTO `user_tbl` (`userID`, `username`, `password`) VALUES
+(1, 'mady', 'passer');
 
 --
 -- Indexes for dumped tables
